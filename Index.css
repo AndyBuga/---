@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    width: 100%;
+    background:rgb(36, 34, 34);
+    font-size: 25px;
+    margin: 0.25%;
+    border: 2px solid gray;
+    box-shadow: 2px 2px black;
+    height: 100px;
+  
+  }
+  #field{
+    position: relative;
+    left: 100px;
+    top: 30px;
+  }
+  #Button{
+      width: 50px;
+  }
+#textField{
+    width: 500px;
+}
+   header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    left: 800px;
+    bottom: 40px;
+   }
+   #Logo {
+       float: left;
+       width: 300px;
+       height: 75px;
+       margin: 10px;
+       background: url("PH.png");   
+   }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    background: rgb(36, 34, 34);
+    float: left;
+    width: 100%;
+    height: 50px; /* only for demonstration, should be removed */
+    margin: 0.25%;
+    border: 2px solid gray;
+    box-shadow: 2px 2px white;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    display:inline-block;
+    padding: 0;
+    }
+    nav li {
+        display:inline-block;
+    }
+
+      nav a {
+         color: rgb(255, 250, 250);
+         text-align: center;
+         text-decoration: none;
+         font-size: 28px;
+         font-family: 'Courier New', Courier, monospace;
+         font-weight: bold;
+         padding: 25px;
+         margin: 5px;
+      }
+
+      nav a:hover { /*псевдоклас для работы при наведении курсора*/
+        background:rgb(155, 152, 152);
+    }
+  
+  article {
+    background: black;
+    float: left;
+    padding: 20px;
+    width: 100%;
+    height: 650px; /* only for demonstration, should be removed */
+    margin: 0.25%;
+    border: 2px solid gray;
+    box-shadow: 2px 2px black;
+    overflow: auto;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background: rgb(36, 34, 34);
+    padding: 7px;
+    text-align:left;
+    color: rgb(255, 255, 255);
+    margin: 0.25%;
+    border: 2px solid gray;
+    box-shadow: 2px 2px black;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  h1 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  #designed {
+    float:left;
+    margin-left: 10%;
+  }
+  #contacts {
+    margin-left: 75%;
+  }
+
+  #gall {
+    position: relative;
+    padding-top: 50%;
+    -moz-user-select: none; user-select: none;
+  }
+  #gall img {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    max-width: 24.5%;
+    max-height: 49.5%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: zoom-in;
+    transition: .2s;
+  }
+  #gall img:nth-child(4n-2) {left: 37.5%;}
+  #gall img:nth-child(4n-1) {left: 62.5%;}
+  #gall img:nth-child(4n) {left: 87.5%;}
+  #gall img:nth-child(n+5) {top: 75%;}
+  
+  #gall img:focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    outline: none;
+    pointer-events: none;
+  }
+  #gall img:focus ~ div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    cursor: zoom-out;
+  }
+  #zatemnenie{
+    background: rgba(102,102,102,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  #okno {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    
+
+  }
+  #zatemnenie:target {display: block;}
+  .close {
+    display: inline-block;
+    display: 1px solid #0000cc;
+    color: blue;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor: pointer;
+  }   
+
+  #Popcorn{
+    background: url("./Images/Popcorn/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+  }
+  #PodCorn{
+    background: url("./Images/PodCorn/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+    color: rgb(22, 48, 163);
+  }
+  #AmyloMaize{
+    background: url("./Images/AmyloMaize/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+    color: magenta;
+  }
+  #DentCorn{
+    background: url("./Images/DentCorn/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+  }
+  #FlintCorn{
+    background: url("./Images/FlintCorn/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+    color: rgb(23, 163, 88);
+  }
+  #StripedMaize{
+    background: url("./Images/StripedMaize/Logo.jpg"); 
+    width: 400px;
+    height: 400px;
+    float: left;    
+    margin: 25px;
+    color: rgb(156, 38, 156);
+  }
+  #SweetCorn{
+    background: url("./Images/SweetCorn/Logo.jpg");
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 25px;
+  }
+  #WaxyCorn{
+    background: url("./Images/WaxyCorn/Logo.jpg");
+    width: 400px;
+    height: 400px; 
+    float: left;
+    margin: 25px;  
+    color: rgb(178, 235, 45);
+  }
+  h5{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 170px;
+  }
+  video{
+    float: left;
+  }
+  #banner{
+    background: url("./Images/SweetCorn.jpg");
+    width: 381px;
+    height: 507px;
+    margin-left: 1400px;
+    margin-top: 50px;
+  }
+  #Corn1,#Corn2,#Corn3,#Corn4,#Corn5,#Corn6,#Corn7,#Corn8{
+    background: wheat;
+    width: 400px;
+    height: 400px; 
+    float: left;
+    margin: 25px;  
+  }
+  #Corn1{
+    background: url("./Images/Corn1.jpg");
+    }
+  #Corn2{
+    background: url("./Images/Corn2.jpg");
+  }
+  #Corn3{
+    background: url("./Images/Corn3.jpg");
+  }
+  #Corn4{
+    background: url("./Images/Corn4.jpg");
+  }
+  #Corn5{
+    background: url("./Images/Corn5.jpg");
+  }
+  #Corn6{
+    background: url("./Images/Corn6.jpg");
+  }
+  #Corn7{
+    background: url("./Images/Corn7.jpg");
+  }
+  #Corn8{
+    background: url("./Images/Corn8.jpg");
+  }
+  
+  
+ 
